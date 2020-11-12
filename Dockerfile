@@ -7,6 +7,7 @@ COPY 01-www.example.com.conf /etc/apache2/sites-available/01-www.example.com.con
 RUN mkdir /var/www/html/www.example.com/
 RUN cp /var/www/html/index.html /var/www/html/www.example.com
 RUN a2ensite 01-www.example.com
+RUN apt-get -y install git zip unzip php-intl php-mbstring php-xml
 ENTRYPOINT /etc/init.d/apache2 start; /bin/bash
 WORKDIR /var/www/html
 EXPOSE 80
