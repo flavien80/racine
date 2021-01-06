@@ -1,0 +1,14 @@
+version: 1.4
+
+prefs:
+  logPath: /home/comChain/jobber/jobber.log
+  runLog:
+    type: file
+    path: /home/comChain/jobber/runlog
+    maxFileLen: 100m
+    maxHistories: 2
+
+jobs:
+  dailyIPFSBackup:
+  
+  dailyCassandraBackup:

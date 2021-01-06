@@ -1,0 +1,27 @@
+version: '3'
+networks:
+  ipfs:
+services:
+  cassandra:
+    image: cassandra:2.2.19
+    hostname: laracine
+    ports:
+      - "7000:7000"
+    environment:
+      CASSANDRA_CLUSTER_NAME: comChain Cluster
+      CASSANDRA_BROADCAST_ADDRESS: 51.77.159.219
+      CASSANDRA_SEEDS: 127.0.0.1,5.196.75.212,5.196.75.215,151.80.37.202,5.196.67.126,5.196.67.240,51.195.117.245
+  ipfs:
+    image : "ipfs/go-ipfs:release"
+    ports:
+      - "4001"
+      - "5001"
+      - "8080"
+    volumes:
+      - "${KEYSTORE_PATH}:/data/ipfs/keystore:rw"
+    networks:
+      - ipfs
+  backups:
+    build: ./backups/
+    networks:
+      - ipfs
