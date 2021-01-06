@@ -1,0 +1,16 @@
+repositories = [
+    "/backups",
+    ]
+
+[environment]
+RESTIC_PASSWORD = "root"
+
+[backup]
+sources = [
+    "/home",
+    "/var"
+    ]
+
+[prune]
+keep-last =  3
+keep-hourly =  5
