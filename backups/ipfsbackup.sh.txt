@@ -1,0 +1,4 @@
+cd /backups/
+touch ipfsbackup.txt
+python3 ipfsbackup.py ipfsbackup.txt
+restic -r /backups/ipfsbackup.txt --verbose backup ~/work

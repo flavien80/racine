@@ -1,0 +1,21 @@
+version: 1.4
+
+prefs:
+  logPath: /home/root/jobber/jobber.log
+  runLog:
+    type: file
+    path: /home/root/jobber/runlog
+    maxFileLen: 100m
+    maxHistories: 2
+
+jobs:
+  DailyIPFSBackup:
+    cmd: /home/root/documents/ipfsbackup.sh
+    time: 0 0 13
+    onError: Stop
+    notifyOnError:
+      - type: program
+        path: /home/root/ipfsbackuperror.sh
+
+  DailyCassandraBackup:
+    
