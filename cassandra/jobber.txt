@@ -12,3 +12,4 @@ jobs:
   dailyIPFSBackup:
   
   dailyCassandraBackup:
+    cmd: backupcassandra.sh
