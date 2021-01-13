@@ -18,4 +18,9 @@ jobs:
         path: /home/root/ipfsbackuperror.sh
 
   DailyCassandraBackup:
-    
+    cmd: /home/root/documents/cassandrabackup.sh
+    time: 0 0 13
+    onError: Stop
+    notifyOnError:
+      - type: program
+        path: /home/root/cassandrabackuperror.sh
