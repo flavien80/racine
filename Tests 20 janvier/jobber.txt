@@ -1,0 +1,24 @@
+version: 1.4
+
+prefs:
+  logPath: /home/jobberuser/jobber/jobber.log
+  runLog:
+    type: memory
+    maxLen: 500
+
+jobs:
+  DailyIPFSBackup:
+    cmd: /home/jobberuser/ipfsbackup.sh
+    time: 0 0 13
+    onError: Stop
+    notifyOnError:
+      - type: program
+        path: /home/jobberuser/ipfsbackuperror.sh
+
+  DailyCassandraBackup:
+    cmd: /home/jobberuser/cassandrabackup.sh
+    time: 0 0 13
+    onError: Stop
+    notifyOnError:
+      - type: program
+        path: /home/jobberuser/cassandrabackuperror.sh
