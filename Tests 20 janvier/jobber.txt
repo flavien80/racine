@@ -8,17 +8,17 @@ prefs:
 
 jobs:
   DailyIPFSBackup:
-    cmd: /home/jobberuser/ipfsbackup.sh
+    cmd: ipfsbackup.sh
     time: 0 0 13
     onError: Stop
     notifyOnError:
       - type: program
-        path: /home/jobberuser/ipfsbackuperror.sh
+        path: ipfsbackuperror.sh
 
   DailyCassandraBackup:
-    cmd: /home/jobberuser/cassandrabackup.sh
+    cmd: cassandrabackup.sh
     time: 0 0 13
     onError: Stop
     notifyOnError:
       - type: program
-        path: /home/jobberuser/cassandrabackuperror.sh
+        path: cassandrabackuperror.sh
