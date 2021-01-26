@@ -9,37 +9,37 @@ client = ipfshttpclient.connect()
 
 configtxt = api.get(config)
 sourceconfig = open(configtxt, 'r')
-destconfig = open("config.txt", 'w')
+destconfig = open("/backups/config.txt", 'w')
 while(line in sourceconfig):
     destconfig.write(line)
     
 repolisttxt = api.get(repolist)
 sourcerepolist = open(repolisttxt, 'r')
-destrepolist = open("repolist.txt", 'w')
+destrepolist = open("/backups/repolist.txt", 'w')
 while(line in sourcerepolist):
     destrepolist.write(line)
 
 node001txt = api.get(node001)
 sourcenode001 = open(node001txt, 'r')
-destnode001 = open("node001.txt", 'w')
+destnode001 = open("/backups/node001.txt", 'w')
 while(line in sourcenode001):
     destnode001.write(line)
 
 cconftxt = api.get(cconf)
 sourcecconf = open(cconftxt, 'r')
-destcconf = open("cconf.txt", 'w')
+destcconf = open("/backups/cconf.txt", 'w')
 while(line in sourcecconf):
     destcconf.write(line)
 
 node002txt = api.get(node002)
 sourcenode002 = open(node002txt, 'r')
-destnode002 = open("node002.txt", 'w')
+destnode002 = open("/backups/node002.txt", 'w')
 while(line in sourcenode002):
     destnode002.write(line)
 
 keyrepolisttxt = api.get(keyrepolist)
 sourcekeyrepolist = open(keyrepolisttxt, 'r')
-destkeyrepolist = open("keyrepolist.txt", 'w')
+destkeyrepolist = open("/backups/keyrepolist.txt", 'w')
 while(line in sourcekeyrepolist):
     destkeyrepolist.write(line)
 # https://python-ipfs-api.readthedocs.io/en/latest/api_ref.html
