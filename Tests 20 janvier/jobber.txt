@@ -22,3 +22,7 @@ jobs:
     notifyOnError:
       - type: program
         path: cassandrabackuperror.sh
+     
+  Jobbertest:
+    cmd: echo "Jobber is running!"
+    time: '*'
