@@ -4,20 +4,11 @@ ENV RESTIC_PASSWORD="root"
 RUN apk update
 RUN apk add restic
 RUN apk add python3
+RUN cd / && mkdir backups
 RUN restic init --repo /backups
 RUN pip3 install --upgrade ipfshttpclient
-RUN cd /home/jobberuser
-RUN mkdir jobber
-RUN cd jobber
-RUN touch runlog.txt
-RUN touch jobber.log
-RUN cd /backups/
-RUN touch config.txt
-RUN touch repolist.txt
-RUN touch node-001.txt
-RUN touch cconf.txt
-RUN touch node-002.txt
-RUN touch keyrepolist.txt
+RUN cd /home/jobberuser && mkdir jobber && cd jobber && touch runlog.txt && touch jobber.log
+RUN cd /backups/ && touch config.txt && touch repolist.txt && touch node-001.txt && touch cconf.txt && touch node-002.txt && touch keyrepolist.txt
 COPY jobber.txt /home/root/
 RUN cat /home/root/jobber.txt > /home/jobberuser/.jobber
 COPY ipfsbackup.sh /home/jobberuser
