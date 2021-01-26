@@ -22,7 +22,7 @@ services:
     networks:
       - ipfs
   backups:
-    build: ./backups/
+    build: backups/
     networks:
       - ipfs
     ports:
