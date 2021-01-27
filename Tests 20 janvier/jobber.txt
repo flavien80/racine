@@ -25,4 +25,4 @@ jobs:
      
   Jobbertest:
     cmd: echo "Jobber is running!"
-    time: '*'
+    time: 10 0 0
