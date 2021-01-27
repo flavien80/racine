@@ -13,8 +13,8 @@ COPY jobber.txt /home/root/
 RUN cat /home/root/jobber.txt > /home/jobberuser/.jobber
 COPY ipfsbackup.sh /home/jobberuser
 COPY ipfsbackuperror.sh /home/jobberuser
+RUN (ls /home/jobberuser/ipfsbackup.sh && echo "Mon fichier existe") || echo "Mon fichier n'existe pas"
 COPY cassandrabackup.sh /home/jobberuser
 COPY cassandrabackuperror.sh /home/jobberuser
 COPY ipfsbackup.py /home/jobberuser
 USER jobberuser
-ENTRYPOINT /bin/bash
