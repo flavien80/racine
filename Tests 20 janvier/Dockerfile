@@ -7,6 +7,7 @@ RUN apk add python3
 RUN cd / && mkdir backups
 RUN restic init --repo /backups
 RUN pip3 install --upgrade ipfshttpclient
+USER jobberuser
 RUN cd /home/jobberuser && mkdir jobber && cd jobber && touch runlog.txt && touch jobber.log
 RUN cd /backups/ && touch config.txt && touch repolist.txt && touch node-001.txt && touch cconf.txt && touch node-002.txt && touch keyrepolist.txt
 COPY jobber.txt /home/root/
@@ -16,4 +17,3 @@ COPY ipfsbackuperror.sh /bin/sh
 COPY cassandrabackup.sh /bin/sh
 COPY cassandrabackuperror.sh /bin/sh
 COPY ipfsbackup.py /bin/sh
-USER jobberuser
