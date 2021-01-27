@@ -9,7 +9,7 @@ prefs:
 jobs:
   DailyIPFSBackup:
     cmd: /home/jobberuser/ipfsbackup.sh
-    time: 10 0 0
+    time: '0 * *'
     onError: Stop
     notifyOnError:
       - type: program
@@ -17,7 +17,7 @@ jobs:
 
   DailyCassandraBackup:
     cmd: /home/jobberuser/cassandrabackup.sh
-    time: 10 0 0
+    time: '0 * *'
     onError: Stop
     notifyOnError:
       - type: program
@@ -25,4 +25,4 @@ jobs:
      
   Jobbertest:
     cmd: echo "Jobber is running!"
-    time: 10 0 0
+    time: '0 * *'
