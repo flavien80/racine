@@ -9,7 +9,7 @@ prefs:
 jobs:
   DailyIPFSBackup:
     cmd: ipfsbackup.sh
-    time: 0 0 13
+    time: 10 0 0
     onError: Stop
     notifyOnError:
       - type: program
@@ -17,7 +17,7 @@ jobs:
 
   DailyCassandraBackup:
     cmd: cassandrabackup.sh
-    time: 0 0 13
+    time: 10 0 0
     onError: Stop
     notifyOnError:
       - type: program
