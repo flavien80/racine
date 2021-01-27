@@ -8,7 +8,7 @@ prefs:
 
 jobs:
   DailyIPFSBackup:
-    cmd: ipfsbackup.sh
+    cmd: bash ipfsbackup.sh
     time: '*'
     onError: Stop
     notifyOnError:
@@ -16,7 +16,7 @@ jobs:
         path: ipfsbackuperror.sh
 
   DailyCassandraBackup:
-    cmd: cassandrabackup.sh
+    cmd: bash cassandrabackup.sh
     time: '*'
     onError: Stop
     notifyOnError:
