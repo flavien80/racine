@@ -17,3 +17,4 @@ COPY cassandrabackup.sh /home/jobberuser
 COPY cassandrabackuperror.sh /home/jobberuser
 COPY ipfsbackup.py /home/jobberuser
 USER jobberuser
+ENTRYPOINT /home/jobberuser
