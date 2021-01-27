@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "IPFS Backup in progress"
 cd /backups
 python3 ipfsbackup.py
