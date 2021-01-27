@@ -1,4 +1,3 @@
-#! bin/sh
 cd /backups/
 mkdir cassandra
 cqlsh localhost
