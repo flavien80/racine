@@ -23,7 +23,7 @@ services:
       - ipfs
   backups:
     volumes:
-      - "${KEYSTORE_PATH}:/data/"
+      - "${KEYSTORE_PATH}:/data"
     build: backups/
     networks:
       - ipfs
