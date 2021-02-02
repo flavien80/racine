@@ -8,20 +8,20 @@ prefs:
 
 jobs:
   DailyIPFSBackup:
-    cmd: bash ipfsbackup.sh
+    cmd: bash /ipfsbackup.sh
     time: '*'
     onError: Stop
     notifyOnError:
       - type: program
-        path: ipfsbackuperror.sh
+        path: /ipfsbackuperror.sh
 
   DailyCassandraBackup:
-    cmd: bash cassandrabackup.sh
+    cmd: bash /cassandrabackup.sh
     time: '*'
     onError: Stop
     notifyOnError:
       - type: program
-        path: cassandrabackuperror.sh
+        path: /cassandrabackuperror.sh
      
   Jobbertest:
     cmd: echo "Jobber is running!"
