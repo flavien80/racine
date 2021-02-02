@@ -17,13 +17,11 @@ services:
       - "4001"
       - "5001"
       - "8080"
-    volumes:
-      - ${KEYSTORE_PATH}:/data/ipfs/keystore:rw
     networks:
       - ipfs
   backups:
     volumes:
-      - backup_data:/var/lib
+      - ${KEYSTORE_PATH}:/data/ipfs/keystore:rw
     build: backups/
     networks:
       - ipfs
