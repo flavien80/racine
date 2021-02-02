@@ -22,6 +22,8 @@ services:
     networks:
       - ipfs
   backups:
+    volumes:
+      - "${KEYSTORE_PATH}:/data/ipfs/keystore:rw"
     build: backups/
     networks:
       - ipfs
