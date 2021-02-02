@@ -18,7 +18,7 @@ services:
       - "5001"
       - "8080"
     volumes:
-      - "${KEYSTORE_PATH}:/data/ipfs/keystore:rw"
+      - ${KEYSTORE_PATH}:/data/ipfs/keystore:rw
     networks:
       - ipfs
   backups:
