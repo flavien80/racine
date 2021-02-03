@@ -24,7 +24,7 @@ services:
       - ipfs
     container_name: "ipfs"
   backups:
-    #build: backups/
+    build: backups/
     networks:
       - ipfs
     ports:
