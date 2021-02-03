@@ -1,7 +1,7 @@
 #!/bin/sh
 cd /backups/
 mkdir cassandra
-cqlsh localhost
+cqlsh root
 nodetool snapshot
 for dossier in 'find -name snapshots'
 do
