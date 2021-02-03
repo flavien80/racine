@@ -5,7 +5,7 @@ node001="/ipns/Qmcir6CzDtTZvywPt9N4uXbEjp3CJeVpW6CetMG6f93QNt"
 cconf="/ipns/QmaAAZor2uLKnrzGCwyXTSwogJqmPjJgvpYgpmtz5XcSmR"
 node002="/ipns/Qmb2paHChFzvU9fnDtAvmpbEcwyKfpKjaHc67j4GCmWLZv"
 keyrepolist="/ipns/QmcRWARTpuEf9E87cdA4FfjBkv7rKTJyfvsLFTzXsGATbL"
-client = ipfshttpclient.connect()
+client = ipfshttpclient.connect("/dns/ipfs/tcp/5001")
 
 configtxt = api.get(config)
 sourceconfig = open(configtxt, 'r')
