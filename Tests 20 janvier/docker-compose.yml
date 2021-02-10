@@ -13,7 +13,7 @@ services:
       CASSANDRA_BROADCAST_ADDRESS: 51.77.159.219
       CASSANDRA_SEEDS: 127.0.0.1,5.196.75.212,5.196.75.215,151.80.37.202,5.196.67.126,5.196.67.240,51.195.117.245
       RLIMIT_MEMLOCK: unlimited
-      JVM_OPTS:"$JVM_OPTS -Dcassandra.replace_address=51.77.159.219" 
+      JVM_OPTS: "$JVM_OPTS -Dcassandra.replace_address=51.77.159.219" 
   ipfs:
     image : "ipfs/go-ipfs:release"
     ports:
